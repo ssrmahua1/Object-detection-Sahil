@@ -1,7 +1,7 @@
 body {
-    background-color: blue; /* Change background color to blue */
-    color: skyblue; /* Change text color to sky blue */
-    font-family: Arial, sans-serif; /* Change font style */
+    background-color: #0a0a23; /* Change background color to blue */
+    color: #7dfcff; /* Change text color to sky blue */
+   font-family: 'Orbitron', sans-serif; /* Change font style to Cypher */
     text-align: center;
 }
 
