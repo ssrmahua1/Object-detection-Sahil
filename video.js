@@ -1,3 +1,27 @@
+// Update constraints with a variable for facing mode
+var constraints = {
+    audio: false,
+    video: {
+        facingMode: facingMode
+    }
+};
+
+// Add event listener for camera toggle button
+document.getElementById("toggleCamera").addEventListener("click", toggleCamera);
+
+// Function to toggle between front and back cameras
+function toggleCamera() {
+    facingMode = (facingMode === "environment") ? "user" : "environment";
+    constraints.video.facingMode = facingMode;
+
+    // Reset camera availability flag
+    cameraAvailable = false;
+
+    // Reattempt to access the camera with updated constraints
+    camera();
+}
+
+
 document.getElementById("ai").addEventListener("change", toggleAi)
 document.getElementById("fps").addEventListener("input", changeFps)
 
