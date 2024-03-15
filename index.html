@@ -74,4 +74,40 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </body>
 
+
+  <p id="current-time">Loading...</p>
+
+  <script>
+    function updateTime() {
+      // Get the current date and time
+      var now = new Date();
+      
+      // Extract hours, minutes, and seconds
+      var hours = now.getHours();
+      var minutes = now.getMinutes();
+      var seconds = now.getSeconds();
+
+      // Convert hours to AM/PM format
+      var ampm = hours >= 12 ? 'PM' : 'AM';
+      hours = hours % 12;
+      hours = hours ? hours : 12; // Handle midnight (0 hours)
+
+      // Format minutes and seconds with leading zeros
+      minutes = minutes < 10 ? '0' + minutes : minutes;
+      seconds = seconds < 10 ? '0' + seconds : seconds;
+
+      // Construct the time string
+      var currentTimeString = hours + ':' + minutes + ':' + seconds + ' ' + ampm;
+      
+      // Display the time
+      document.getElementById('current-time').textContent = currentTimeString;
+    }
+    
+    // Update the time every second
+    setInterval(updateTime, 1000);
+    
+    // Initial call to display time immediately
+    updateTime();
+  </script>   
+
 </html>
