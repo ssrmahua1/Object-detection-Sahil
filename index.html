@@ -13,21 +13,7 @@
       }
     }
   </style>
-  <h1>Prevent Screenshot</h1>
-  <p>This page attempts to prevent screenshot capture on Chrome for Android.</p>
-  
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      // Detect when the user tries to take a screenshot
-      window.addEventListener('keydown', function(e) {
-        // Check if the user is pressing the screenshot key combination
-        if (e.key === 'Control' && e.key === 'Shift' && e.key === 'S') {
-          e.preventDefault(); // Prevent the default behavior (taking a screenshot)
-          alert('Screenshots are not allowed on this page.'); // Show an alert message
-        }
-      });
-    });
-  </script>
+ 
 <head>
   <figure class="image image_resized">
   <img class="cyber-img" src="https://piet.co.in/wp-content/uploads/2022/04/cropped-cropped-logo-1-1-e1650714110962.png" width="73" height="89">
