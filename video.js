@@ -11,7 +11,14 @@ document.getElementById("toggleCamera").addEventListener("click", toggleCamera);
 
 // Function to toggle between front and back cameras
 function toggleCamera() {
-    facingMode = (facingMode === "environment") ? "user" : "environment";
+    // Toggle between front and back cameras
+    if (facingMode === "user") {
+        facingMode = "environment"; // Switch to back camera
+    } else {
+        facingMode = "user"; // Switch to front camera
+    }
+
+    // Update facing mode in constraints
     constraints.video.facingMode = facingMode;
 
     // Reset camera availability flag
@@ -20,7 +27,6 @@ function toggleCamera() {
     // Reattempt to access the camera with updated constraints
     camera();
 }
-
 
 document.getElementById("ai").addEventListener("change", toggleAi)
 document.getElementById("fps").addEventListener("input", changeFps)
