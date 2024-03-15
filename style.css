@@ -1,6 +1,6 @@
 canvas#c1 {
     border: 5px solid White; /* Neon green border */
-    box-shadow: 0 0 10px #39ff14, 0 0 20px #39ff14, 0 0 30px #39ff14; /* Neon glow effect */
+    box-shadow: 0 0 10px White, 0 0 20px White, 0 0 30px White; /* Neon glow effect */
 }
 
 body {
