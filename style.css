@@ -10,9 +10,11 @@ body {
   background-repeat: no-repeat;
 }
 
-canvas#c1 {
-  border: 5px solid #39ff14; /* Neon green border */
-  box-shadow: 0 0 10px #39ff14, 0 0 20px #39ff14, 0 0 30px #39ff14; /* Neon glow effect */
+ canvas#c1 {
+      border: 5px solid white; /* Neon green border */
+      box-shadow: 0 0 10px white, 0 0 20px white, 0 0 30px white; /* Neon glow effect */
+      border-radius: 10px; /* Make canvas frame corners round */
+
 }
 
 video {
